@@ -1,4 +1,4 @@
-import { IonHeader, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonHeader, IonRow, IonCol } from '@ionic/react';
 import React from 'react';
 import { Wrap } from './index.style';
 

@@ -1,17 +1,15 @@
 import { IonPage } from '@ionic/react';
 import React, { Component } from 'react';
-import { Wrap } from '../theme/Login.style';
 import Header from '../components/Header/index';
 
-export class Login extends Component {
+export class Register extends Component {
   render() {
     return (
       <IonPage>
-        <Header title="Ucaribe Carpooling" />
-        <Wrap></Wrap>
+        <Header title="Registro"></Header>
       </IonPage>
     );
   }
 }
 
-export default Login;
+export default Register;

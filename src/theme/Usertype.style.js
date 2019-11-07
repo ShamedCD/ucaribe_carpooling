@@ -1,4 +1,4 @@
-import { IonButton, IonContent } from '@ionic/react';
+import { IonButton } from '@ionic/react';
 import styled from 'styled-components';
 
 export const ButtonFromIon = styled(IonButton)`

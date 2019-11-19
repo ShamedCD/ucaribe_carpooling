@@ -28,6 +28,9 @@ export class Register extends Component {
         motherLastName: {
           value: '',
         },
+        phone: {
+          value: '',
+        },
         birhdate: {
           value: moment().format(),
         },
@@ -93,6 +96,16 @@ export class Register extends Component {
             <IonInput
               value={this.state.formControls.motherLastName.value}
               name="motherLastName"
+              onIonChange={this.handleChange}
+            ></IonInput>
+          </IonItem>
+          <IonItem>
+            <IonLabel position="stacked">
+              Telefono <IonText color="danger">*</IonText>
+            </IonLabel>
+            <IonInput
+              value={this.state.formControls.phone.value}
+              name="phone"
               onIonChange={this.handleChange}
             ></IonInput>
           </IonItem>

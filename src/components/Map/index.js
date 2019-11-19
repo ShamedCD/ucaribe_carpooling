@@ -7,7 +7,7 @@ import {
   Marker,
 } from 'react-google-maps';
 
-const API_KEY = 'AIzaSyBVS0hM9gNqU3jwtif5IG4I02trSxy7Rvo';
+const API_KEY = '';
 
 const Map = compose(
   withProps({

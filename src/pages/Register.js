@@ -11,6 +11,7 @@ import {
   IonButton,
 } from '@ionic/react';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 import Header from '../components/Header/index';
 
@@ -133,7 +134,9 @@ export class Register extends Component {
               ))}
             </IonSelect>
           </IonItem>
-          <IonButton expand="block">Registrarse</IonButton>
+          <Link to="/address">
+            <IonButton expand="block">Registrarse</IonButton>
+          </Link>
         </IonContent>
       </IonPage>
     );

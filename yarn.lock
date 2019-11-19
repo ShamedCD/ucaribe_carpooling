@@ -7093,7 +7093,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.0, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -7287,9 +7287,24 @@ react-error-overlay@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.3.tgz#c378c4b0a21e88b2e159a3e62b2f531fd63bf60d"
 
+react-geocode@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-geocode/-/react-geocode-0.2.1.tgz#c9f58d979097272831a01ef0ebd89add8e15725a"
+  integrity sha512-kipHpIA1w0XbQ2x6BOpLsup9kui6yjjAaXigCtom85xiKDB2KqDlxYx7dzd68Hxd5KG27nSFiWNRLosjKVg6VQ==
+  dependencies:
+    regenerator-runtime "^0.13.3"
+
+react-google-autocomplete@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-google-autocomplete/-/react-google-autocomplete-1.1.2.tgz#e64a90ed83499b6b232cd10456f3e430c1a7780e"
+  integrity sha512-J/0sPcKrYnc3lDJapI82zpB/Kbc3LnuhT6F+1s8ybi8X42DB7EqtYEUpcgv3//daWsZ/YLeRjFzZWb2IO89xjA==
+  dependencies:
+    prop-types "^15.5.0"
+
 react-google-maps@^9.4.5:
   version "9.4.5"
   resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-9.4.5.tgz#920c199bdc925e0ce93880edffb09428d263aafa"
+  integrity sha512-8z5nX9DxIcBCXuEiurmRT1VXVwnzx0C6+3Es6lxB2/OyY2SLax2/LcDu6Aldxnl3HegefTL7NJzGeaKAJ61pOA==
   dependencies:
     babel-runtime "^6.11.6"
     can-use-dom "^0.1.0"
@@ -7506,7 +7521,7 @@ regenerate@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
 
-regenerator-runtime@0.13.3, regenerator-runtime@^0.13.2:
+regenerator-runtime@0.13.3, regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
 

@@ -8,40 +8,59 @@ import {
   IonSelect,
   IonSelectOption,
   IonDatetime,
-  IonButton
-} from "@ionic/react";
-import React, { Component } from "react";
-import moment from "moment";
-import Header from "../components/Header/index";
+  IonButton,
+} from '@ionic/react';
+import React, { Component } from 'react';
+import moment from 'moment';
+import Header from '../components/Header/index';
 
 export class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: ""
+      formControls: {
+        name: {
+          value: '',
+        },
+        fatherLastName: {
+          value: '',
+        },
+        motherLastName: {
+          value: '',
+        },
+        birhdate: {
+          value: moment().format(),
+        },
+        carreer: {
+          value: '',
+        },
+      },
     };
   }
 
   handleChange = ({ target }) => {
-    const { value: name } = target;
-    this.setState({ name });
-    console.log(this.state.name);
+    const { value, name } = target;
+    this.setState({
+      formControls: {
+        ...this.state.formControls,
+        [name]: {
+          ...this.state.formControls[name],
+          value,
+        },
+      },
+    });
   };
-
-  getUserInfo() {
-    console.log("name: ", this.state.name);
-  }
 
   render() {
     const degrees = [
-      { id: 1, name: "Gastronimía" },
-      { id: 2, name: "Negocios Internaciones" },
-      { id: 3, name: "Innovación Empresarial" },
-      { id: 4, name: "Turismo" },
-      { id: 5, name: "Datos e Inteligencia Organizacional" },
-      { id: 6, name: "Industrial" },
-      { id: 7, name: "Ambiental" },
-      { id: 8, name: "Logística" }
+      { id: 1, name: 'Gastronimía' },
+      { id: 2, name: 'Negocios Internaciones' },
+      { id: 3, name: 'Innovación Empresarial' },
+      { id: 4, name: 'Turismo' },
+      { id: 5, name: 'Datos e Inteligencia Organizacional' },
+      { id: 6, name: 'Industrial' },
+      { id: 7, name: 'Ambiental' },
+      { id: 8, name: 'Logística' },
     ];
     return (
       <IonPage>
@@ -52,7 +71,7 @@ export class Register extends Component {
               Nombre <IonText color="danger">*</IonText>
             </IonLabel>
             <IonInput
-              value={this.state.name}
+              value={this.state.formControls.name.value}
               name="name"
               onIonChange={this.handleChange}
             ></IonInput>
@@ -61,13 +80,21 @@ export class Register extends Component {
             <IonLabel position="stacked">
               Apellido Paterno <IonText color="danger">*</IonText>
             </IonLabel>
-            <IonInput></IonInput>
+            <IonInput
+              value={this.state.formControls.fatherLastName.value}
+              name="fatherLastName"
+              onIonChange={this.handleChange}
+            ></IonInput>
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">
               Apellido Materno <IonText color="danger">*</IonText>
             </IonLabel>
-            <IonInput></IonInput>
+            <IonInput
+              value={this.state.formControls.motherLastName.value}
+              name="motherLastName"
+              onIonChange={this.handleChange}
+            ></IonInput>
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">
@@ -75,20 +102,25 @@ export class Register extends Component {
             </IonLabel>
             <IonDatetime
               displayFormat="DD/MM/YYYY"
-              value={moment().format()}
+              value={this.state.formControls.birhdate.value}
+              name="birthdate"
+              onIonChange={this.handleChange}
             ></IonDatetime>
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Carrera</IonLabel>
-            <IonSelect interface="action-sheet">
+            <IonSelect
+              interface="action-sheet"
+              value={this.state.formControls.carreer.value}
+              name="carreer"
+              onIonChange={this.handleChange}
+            >
               {degrees.map(({ id, name }) => (
                 <IonSelectOption value={id}>{name}</IonSelectOption>
               ))}
             </IonSelect>
           </IonItem>
-          <IonButton expand="block" onClick={() => this.getUserInfo()}>
-            Registrarse
-          </IonButton>
+          <IonButton expand="block">Registrarse</IonButton>
         </IonContent>
       </IonPage>
     );
